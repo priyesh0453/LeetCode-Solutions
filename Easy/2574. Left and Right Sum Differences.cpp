@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-vector<int> leftRightDifference(vector<int>& nums, int noOfNums, vector <int> answer);
+vector<int> leftRightDifference(vector<int>& nums, int noOfNums, vector <int>& answer);
 void display(vector <int> answer, int noOfNums);
 
 int main()
@@ -11,7 +11,7 @@ int main()
     cin >> noOfNums;
     
     vector <int> nums(noOfNums);
-    vector <int> answer(noOfNums);
+    vector <int> answer(noOfNums, 0);
     
     for(; i < noOfNums; i++)
     {
@@ -24,7 +24,7 @@ int main()
     return 0;
 }
 
-vector<int> leftRightDifference(vector<int>& nums, int noOfNums, vector <int> answer) 
+vector<int> leftRightDifference(vector<int>& nums, int noOfNums, vector <int>& answer) 
 {
     int i = 0, rightSum = 0, leftSum = 0;
 
